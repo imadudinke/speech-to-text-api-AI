@@ -1,43 +1,100 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.db
+# ---------------------------------------------------
+# Python-specific ignores
+# ---------------------------------------------------
 
-# Virtual environment
+# Compiled Python files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.cache/
+.tox/
+
+# Virtual environments
+# Add all possible names for virtual environment folders
 venv/
-.env/
 .venv/
 env/
+.env/
 
-# IDE
-.vscode/
-.idea/
+# Environment variables
+# This is a critical security ignore.
+.env
+.flaskenv
+.secrets.ini
 
-# OS files
-.DS_Store
-Thumbs.db
+# Test and coverage files
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Logs
-*.log
+# MyPy and other type checking caches
+.mypy_cache/
 
-# Hugging Face cache (large model files)
-~/.cache/
-~/.huggingface/
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+
+# ---------------------------------------------------
+# AI / Machine Learning ignores
+# ---------------------------------------------------
+
+# Hugging Face cache (extremely important to ignore!)
+# The cache is normally stored in ~/.cache/huggingface, but can sometimes be local.
+# It contains large model files that should not be in your repo.
+.huggingface/
+# Specific model and tokenizer files
 *.safetensors
 *.bin
+*.json
+*.model
 
-# Audio files
+# PyTorch specific files
+*.pt
+*.pth
+*.tar
+
+# Model checkpoints and weights
+checkpoints/
+models/
+runs/
+
+# Dataset files
+data/
+datasets/
+
+
+# ---------------------------------------------------
+# General ignores
+# ---------------------------------------------------
+
+# Editor and IDE files
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDEs (PyCharm, IntelliJ)
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Audio and other media files
+# These are inputs and outputs and should generally not be versioned.
 *.wav
 *.mp3
 *.m4a
+*.flac
+*.ogg
+*.opus
 
-# PyTorch
-*.pt
-*.pth
-
-# Build
-dist/
-build/
-*.egg-info/
