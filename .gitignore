@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Virtual environment
+venv/
+.env/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Hugging Face cache (large model files)
+~/.cache/
+~/.huggingface/
+*.safetensors
+*.bin
+
+# Audio files
+*.wav
+*.mp3
+*.m4a
+
+# PyTorch
+*.pt
+*.pth
+
+# Build
+dist/
+build/
+*.egg-info/
